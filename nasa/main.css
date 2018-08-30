@@ -1,0 +1,17 @@
+h3 {
+  color: black;
+}
+
+.container  {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+max-width: 600px;
+}
+
+
+.container img {
+
+  width: 200px;
+  max-height: 200px;
+}
