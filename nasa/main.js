@@ -1,25 +1,17 @@
 
 function getData(url) {
   return new Promise(function (resolve, reject) {
-
     const req = new XMLHttpRequest()
-
     req.open('GET', url)
-
     req.onload = function () {
-
       if (req.status === 200) {
-
         resolve(req.response)
       } else {
-
         reject(req.status + ' ' + req.statusText)
       }
     }
 
-
-    req.onerror = function () {
-   
+    req.onerror = function () {   
       reject('Erro de conexão')
     }
 
@@ -37,20 +29,13 @@ const p = getData("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/phot
   
   for (const photo of jsonResponse['photos']) {
     console.log(photo.img_src)
-
     const divGetImg = document.createElement("div")
     const newDiv___GetImg = document.createElement("div")
-
     const newImg = document.createElement("img")
-
     divGetImg.appendChild(newDiv___GetImg)
-
     newDiv___GetImg.classList.add("imgrequest")
-
     newDiv___GetImg.appendChild(newImg)
-
-    newImg.src = photo.img_src
-    
+    newImg.src = photo.img_src    
     divcontainer.appendChild(divGetImg)
 
 
